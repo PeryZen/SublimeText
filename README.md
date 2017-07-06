@@ -4,11 +4,12 @@
 <!-- MarkdownTOC -->
 
 - [插件](#插件)
-    - [管理插件](#管理插件)
-    - [Markdown](#markdown)
+    - [插件管理](#插件管理)
+    - [Markdown系列插件](#markdown系列插件)
         - [实时预览](#实时预览)
         - [Markdown Editing](#markdown-editing)
         - [MarkdownTOC](#markdowntoc)
+    - [插件开发](#插件开发)
 
 <!-- /MarkdownTOC -->
 
@@ -17,12 +18,12 @@
 
 Sublime可以通过插件扩展功能。
 
-<a name="管理插件"></a>
-## 管理插件
+<a name="插件管理"></a>
+## 插件管理
 
 
-<a name="markdown"></a>
-## Markdown
+<a name="markdown系列插件"></a>
+## Markdown系列插件
 
 <a name="实时预览"></a>
 ### 实时预览
@@ -57,7 +58,11 @@ MarkdownTOC是Sublime Text 3下一款通过识别Markdown标题关键字来自�
     "default_lowercase_only_ascii": true,
 
     // 三级目录结构
-    "default_depth": 3
+    "default_depth": 3,
+
+    // true - non-ASCII characters in link ids are URL encoded. e.x. [中国的例子][%E4%B8%AD%E5%9B%BD%E7%9A%84%E4%BE%8B%E5%AD%90]
+    // false - non-ASCII characters in link ids are not URL encoded. e.x. [中国的例子][中国的例子]
+    "default_uri_encoding": false
 }
 ```
 
@@ -79,5 +84,8 @@ MarkdownTOC是Sublime Text 3下一款通过识别Markdown标题关键字来自�
 #### 更新TOC
 
 保存文档或点击更新TOC操作`Tools > MarkdownTOC > Update TOC`会自动更新目录。
+
+<a name="插件开发"></a>
+## 插件开发
 
 

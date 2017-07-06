@@ -8,5 +8,9 @@
     "default_lowercase_only_ascii": true,
 
     // 三级目录结构
-    "default_depth": 3
+    "default_depth": 3,
+
+    // true - non-ASCII characters in link ids are URL encoded. e.x. [中国的例子][%E4%B8%AD%E5%9B%BD%E7%9A%84%E4%BE%8B%E5%AD%90]
+    // false - non-ASCII characters in link ids are not URL encoded. e.x. [中国的例子][中国的例子]
+    "default_uri_encoding": false
 }
